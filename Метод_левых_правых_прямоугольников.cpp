@@ -14,7 +14,7 @@ double rectangle_integral(pointFunc f, double a, double b, int n) {
   double fx;
   h = (b - a) / n;  // шаг
 
-  for (int i = 0; i < n; i++) {
+  for (int i = 0; i < n; i++) { // для метода правых (int i = 1)
     x = a + i * h;
     fx = f(x);
     sum += fx;
