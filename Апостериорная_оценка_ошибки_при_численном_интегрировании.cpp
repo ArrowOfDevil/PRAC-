@@ -12,7 +12,7 @@ int N = 1;
 
 double f(double x) { return 1 / (1 + pow(x, 2)); }
 // Trapezoid method
-double Integration(double y(double x), double b, double a, int N) {
+double Integration(double y(double x), double b, double a, int n) {
   double x, h;
   double sum = 0.0;
   h = (b - a) / n;  // шаг
