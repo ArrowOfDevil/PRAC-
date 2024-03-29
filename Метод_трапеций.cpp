@@ -6,7 +6,7 @@
 using namespace std;
 typedef double (*pointFunc)(double);
 double f(double x) { return (10 - x); }
-double avg_rectangle_integral(pointFunc f, double a, double b, int n) {
+double trapezial_integral(pointFunc f, double a, double b, int n) {
   double x, h;
   double sum = 0.0;
   h = (b - a) / n;  // шаг
