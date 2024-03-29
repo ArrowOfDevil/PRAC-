@@ -38,4 +38,5 @@ int main() {
     s1 = avg_rectangle_integral(f, a, b, n);
   } while (fabs(s1 - s) > eps);  // сравнение приближений с заданной точностью
   cout << "\nИнтеграл = " << s1 << endl;
+  return 0;
 }
