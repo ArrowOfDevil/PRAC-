@@ -13,14 +13,20 @@ int N = 1;
 double f(double x) { return 1 / (1 + pow(x, 2)); }
 
 // Trapezoid method
-double Integration(double y(double x), double b, double a, int N) {
-  double h = (b - a) / N;
-  double I = 0;
+double Integration(double y(double x), double b, double a, int n) {
+  double x, h;
+  double sum = 0.0;
+  h = (b - a) / n;  // шаг
 
-  for (int n = 1; n <= N + 1; n++) {
-    I = I + (f(a + h * n) + f(a + h * (n - 1))) / 2 * h;
+  for (int i = 0; i <= n; i++) {
+    x = a + i * h;
+    if (i == 0 || i == n)
+      sum += 0.5 * f(x);
+    else
+      sum += f(x);
   }
-  return I;
+  return (sum * h);  // приближенное значение интеграла равно
+                     // сумме площадей прямоугольников
 }
 
 void mistakes(double f(double x), double r, double p, double q, double S) {
