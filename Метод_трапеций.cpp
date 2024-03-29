@@ -34,12 +34,12 @@ int main() {
   cin >> b;
   cout << "\nВведите требуемую точность eps = ";
   cin >> eps;
-  s1 = avg_rectangle_integral(f, a, b, n);  // первое приближение для интеграла
+  s1 = trapezial_integral(f, a, b, n);  // первое приближение для интеграла
   do {
     s = s1;     // второе приближение
     n = 2 * n;  // увеличение числа шагов в два раза,
                 // т.е. уменьшение значения шага в два раза
-    s1 = avg_rectangle_integral(f, a, b, n);
+    s1 = trapezial_integral(f, a, b, n);
   } while (fabs(s1 - s) > eps);  // сравнение приближений с заданной точностью
   cout << "\nИнтеграл = " << s1 << endl;
   return 0;
