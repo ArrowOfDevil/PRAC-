@@ -49,4 +49,7 @@ void mistakes(double f(double x), double r, double p, double q, double S) {
     cout << endl;
   }
 }
-int main() { mistakes(f, r, p, q, S); }
+int main() { 
+  mistakes(f, r, p, q, S); 
+  return 0;
+}
