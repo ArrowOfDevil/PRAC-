@@ -6,6 +6,15 @@ using namespace std;
 // Функция, определяющая левую часть уравнения f (x) = 0.
 double f(double x) { return (x * x - cos(5 * x)); }
 // Функция, реализующая метод касательных.
+double f1(double x)  // Первая производная функции f (x).
+{
+  return (2 * x + 5 * sin(5 * x));
+}
+double f2(double x)  // Вторая производная функции f (x).
+{
+  return (2 + 25 * cos(5 * x));
+}
+
 int Tangent(double a, double b, double *c, double eps) {
   int k = 0;
   if (f(a) * f2(a) > 0)
